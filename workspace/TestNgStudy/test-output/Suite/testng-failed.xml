@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="para1" value="Dog"/>
+  <parameter name="para2" value="Cat"/>
+  <test name="Test1(failed)">
+    <groups>
+      <run>
+        <include name="functiontest"/>
+        <include name="systemtest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNg.DataProviderTest">
+        <methods>
+          <include name="testVerifyUser"/>
+        </methods>
+      </class> <!-- TestNg.DataProviderTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

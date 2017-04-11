@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" preserve-order = "true"><!-- preserve-order 设置各个test是否按节点顺序执行 -->
+  <parameter name = "para1" value = "Dog" />
+  <parameter name = "para2" value = "Cat" />
+  <test name="Test1" preserve-order = "true"><!-- preserve-order 设置各个class是否按节点顺序执行 -->
+      <groups>
+          <run>
+              <include name = "functiontest"></include><!-- 包含在groups中的方法才会被执行 -->
+              <include name = "systemtest"></include>
+          </run>
+      </groups>
+      <classes>
+      	<class name = "TestNg.TestNg1">
+      		<methods>
+      		    <include name = "test11"></include>
+      		    <include name = "Aest12"></include>
+      		    <include name = "test13"></include>
+      		    <include name = "test14"></include>
+      		    <include name = "testException"></include>
+      		    <include name="test15"></include>
+      		</methods>	
+      	</class>
+      	<class name = "TestNg.TestNg">
+      		<methods>
+      		    <include name = "test2"></include>
+      		    <include name = "test1"></include>
+      	    </methods>
+      	</class>
+      	<class name = "TestNg.GroupTest" />
+      	<class name = "TestNg.ParameterizedTest" ><!--为什么该类的方法不添加methods就无法执行？  -->
+      	    <methods>
+      	        <include name = "testPara1"></include>
+      	    </methods>
+      	</class>
+      	<class name = "TestNg.DataProviderTest" >
+      	    <methods>
+      	        <include name="testVerifyUser"></include>
+      	    </methods>
+      	</class>
+      </classes>
+  </test>
+  <test name = "Test2" preserve-order = "true">
+      <classes>
+          <class name = "TestNg.ParameterizedTest" />
+          <class name = "TestNg.TestNg1" />
+          <class name = "TestNg.TestNg" >
+              <methods>
+                  <include name = "test1" ></include>
+              </methods>
+          </class>
+      </classes>
+  </test>
+</suite>
