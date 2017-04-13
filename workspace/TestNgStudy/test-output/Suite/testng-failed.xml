@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="para1" value="Dog"/>
-  <parameter name="para2" value="Cat"/>
-  <test name="Test1(failed)">
-    <groups>
-      <run>
-        <include name="functiontest"/>
-        <include name="systemtest"/>
-      </run>
-    </groups>
+  <test name="Test2(failed)">
     <classes>
-      <class name="TestNg.DataProviderTest">
+      <class name="TestNg.ParameterizedTest">
         <methods>
-          <include name="testVerifyUser"/>
+          <include name="testPara1"/>
         </methods>
-      </class> <!-- TestNg.DataProviderTest -->
+      </class> <!-- TestNg.ParameterizedTest -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

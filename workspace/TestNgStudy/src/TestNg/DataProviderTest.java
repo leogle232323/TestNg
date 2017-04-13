@@ -11,6 +11,6 @@ public class DataProviderTest {
 
 	@Test(dataProvider = "user")
 	public void testVerifyUser(String userName, String password) {
-		System.out.println("UserName:" + userName + "Password:" + password);
+		System.out.println("UserName:" + userName + " Password:" + password);
 	}
 }
